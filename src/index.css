@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-dancing: "Dancing Script", cursive;
+
+  --color-valentine-red: #e11d48;
+  --color-valentine-pink: #fb7185;
+  --color-valentine-rose: #fff1f2;
+  --color-valentine-gold: #fbbf24;
+}
+
+
+body {
+  font-family: var(--font-outfit);
+  background-color: var(--color-valentine-rose);
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+.font-dancing {
+  font-family: var(--font-dancing);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-valentine-rose);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-valentine-pink);
+  border-radius: 10px;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(225, 29, 72, 0.1);
+}
+
+.gradient-text-valentine {
+  background: linear-gradient(135deg, #e11d48 0%, #fb7185 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes heart-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-heart-pulse {
+  animation: heart-pulse 2s ease-in-out infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up 10s linear infinite;
+}

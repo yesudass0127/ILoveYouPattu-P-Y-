@@ -1,0 +1,8 @@
+{
+  "name": "Aivent - AI SaaS Landing Page",
+  "description": "A high-end, responsive AI-focused landing page featuring futuristic design, glowing accents, and an integrated Gemini-powered AI playground.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
